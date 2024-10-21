@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Musicas</title>
+    <style type="text/css">
+        table,td,th{
+            border: 1px solid hsl(0, 0%, 0%);
+        }
+    </style>
+</head>
+<body>
+    <h1>{{titulo}}</h1>
+    <table>
+        <tr>
+            <th>Nome da Musica</th>
+            <th>Artista</th>
+            <th>Gênero</th>
+        </tr>
+         
+        <tr>
+            <td>Evidencias</td>
+            <td>Chitãozinho e Xororó</td>
+            <td>Sertanejo</td>
+        </tr>
+        <tr>
+            <td>Ousadia e Alegria</td>
+            <td>Thiaguinho</td>
+            <td>Pagode</td>
+        </tr>
+        {% for musica in musicas %}
+        <tr>
+            <td>{{musica['nome']}}</td>
+            <td>{{musica['Artista']}}</td>
+            <td>{{musica['Genero']}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

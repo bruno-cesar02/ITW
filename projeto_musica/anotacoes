@@ -1,0 +1,13 @@
+instalar flask :
+pip install flask
+
+instalar mysql-connector-python:
+pip install mysql-connector-python
+
+instalar mysqlclient:
+pip install mysqlclient
+
+
+pip install flask-sqlalchemy
+
+pip install cx_Oracle
