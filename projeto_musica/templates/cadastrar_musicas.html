@@ -4,35 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Musicas</title>
-    <style>
-        input{
+    <style>form label,
+           form input,
+           form button,
+           img {
             display: block;
-            margin-bottom:10px ;
-            border-radius: 10px;
-            
-        }
-        
-      
+            margin: 2px;
+           }
+
     </style>
 </head>
 <body>
- <form method="post" action="/adicionar">
-      <label> Nome da música:</label>
-      <input type="text" name="txtNome">
-
-      <label> Artista:</label>
-      <input type="text" name="txtArtista">
-
-      <label> Genero:</label>
-      <input type="text" name="txtGenero">
-
-     <button type="submit">Cadastrar Música</button>
-
-
-
-
-
- </form>
     
+    <form method="post" action="/adicionar" enctype="multipart/form-data">
+        <input type ='file' name="arquivo" accept=".jpg, .jpeg, .png">
+        <label>Nome da Música:</label>
+        <input type="text" name="txtNome">
+        <label>Artista:</label>
+        <input type="text" name="txtArtista">
+        <label>Gênero:</label>
+        <input type="text" name="txtGenero">
+        <button type="submit">Cadastrar Música</button>
+    </form>
+
 </body>
 </html>

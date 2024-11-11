@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Musicas</title>
+</head>
+<body>
+    
+    <form method="post" action="/atualizar">
+        <img src = "{{url_for( 'imagem', nome_imagem=album_musica)}}" width="200px" height="auto">
+        <label>Nome da Música:</label>
+        <input type="text" name="txtNome" value="{{musica[0]}}" readonly>
+        <label>Artista:</label>
+        <input type="text" name="txtArtista" value="{{musica[1]}}">
+        <label>Gênero:</label>
+        <input type="text" name="txtGenero" value="{{musica[2]}}">
+        <button type="submit">Editar Música</button>
+    </form>
+
+</body>
+</html>

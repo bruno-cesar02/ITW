@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Musicas</title>
+    <style type="text/css">
+        table,td,th {
+            border: 1px solid #000
+        }
+    </style>
+</head>
+<body>
+    <h3>{{titulo}}</h3>
+
+    <a href="{{url_for('cadastra_musica')}}">
+        <button>Cadastrar Musica</button>
+    </a>
+    
+    <table>
+        <tr>
+            <th>Nome da Música</th>
+            <th>Artista</th>
+            <th>Gênero</th>
+            <th>Ações</th>
+        </tr>
+
+        {% for musica in musicas %}
+        <tr>
+            <td>{{musica['nome']}}</td>
+            <td>{{musica['Artista']}}</td>
+            <td>{{musica['Genero']}}</td>
+            <td>
+                <a href="{{url_for('editar', nome=musica['nome'])}}">
+                      <img src="{{url_for('static',filename='images/editar.png')}}" style="width: 16px; height: 16px;"></a>
+                <a href="{{url_for('excluir', nome=musica['nome'])}}">
+                <img src="{{url_for('static',filename='images/excluir.png')}}" style="width: 16px; height: 16px;"></a>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>
